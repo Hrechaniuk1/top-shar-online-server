@@ -8,7 +8,8 @@ export async function innitMongoDBConnection() {
         const url = env('MONGODB_URL');
         const db = env('MONGODB_DB');
 
-        await mongoose.connect(`mongodb+srv://${user}:${pwd}@${url}/${db}?retryWrites=true&w=majority&appName=Cluster0`);
+        await mongoose.connect(`mongodb+srv://${user}:${pwd}@${url}/${db}?retryWrites=true&w=majority&appName=Cluster0`, {connectTimeoutMS: 20000, 
+            socketTimeoutMS: 45000,});
         console.log('MDB conected');
     }  catch (err) {
         console.log('init err', err);
