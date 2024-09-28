@@ -13,7 +13,7 @@
    git clone https://github.com/Hrechaniuk1/top-shar-online-server
 2. Перейди на сторінку проекту
    ```bash
-   cd contacts-app-server
+   cd top-shar-online-server
 4. Встанови залежості
    ```bash
    npm install
